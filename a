@@ -1,0 +1,15 @@
+# seidoはリスト形式で、精度を1つ目のカラムから入力してください　例：seido = [10,10,10,10,10,5]
+#corumn_numはカラムの数を入れてください　例:カラムが3つだったら3
+#lengthは作成するデータ数を入れてください　例:
+
+
+def make_csv(corumn_num,seido,length):
+    lis_an = []
+    
+    for i in range(1,length+1):
+        lis_gd = []
+        for j in range(corumn_num):
+            lis_gd.append('"' + str(i).zfill(seido[j]) + '"')
+        lis_an.append(lis_gd)    
+    
+    return lis_an
